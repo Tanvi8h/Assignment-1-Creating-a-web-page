@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tea Recipe</title>
+    <link rel="stylesheet" href="assignment1.css">
+    <style>
+    </style>
+</head>
+<body>
+    <header>
+        <h1>How to Make a Perfect Cup of Masala Chai</h1>
+        <img src="assignment1images/MasalaChai.webp" alt="image of tea" style="width: 400px;">
+    </header>
+
+    <main>
+        <section class="recipe">
+            <h2>Ingredients</h2>
+            <ul id="ingredient-list">
+                <li><input type="checkbox" id="ingredient1"><label for="ingredient1">1 and 1/2 cup of water</label></li>
+                <li><input type="checkbox" id="ingredient2"><label for="ingredient2">1 spoon sauf (fennel seeds)</label></li>
+                <li><input type="checkbox" id="ingredient3"><label for="ingredient3">2 crushed elaichi (cardamom)</label></li>
+                <li><input type="checkbox" id="ingredient4"><label for="ingredient4">1/2 half of a cinnamon stick</label></li>
+                <li><input type="checkbox" id="ingredient5"><label for="ingredient5">2 tbsp chai patti (tea mix)</label></li>
+                <li><input type="checkbox" id="ingredient6"><label for="ingredient6">1/2 cup milk (any is fine!)</label></li>
+            </ul>
+            <div class="button-container">
+                <button id="clearCompleted">Clear Completed</button>
+            </div>
+        </section>
+
+        <section class="instructions">
+            <h2>Instructions</h2>
+            <ol>
+                <li>1. Boil water in a pot on the stove on medium-high</li>
+                <li>2. Place the sauf (fennel seeds), elaichi (cardamom), cinnamon stick, and cloves in the water and allow to boil.</li>
+                <li>3. Once boiling add chai patti and continue to boil for two minutes.</li>
+                <li>4. After two minutes, add milk to boiling water.</li>
+                <li>5. The tea will soon rise to the top of the pot after two minutes and turn off the stove.</li>
+                <li>6. Pour tea through a strainer into a cup or tea kettle.</li>
+                <li>7. Add sugar if you would like and enjoy with a tea biscuit!</li>
+            </ol>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Masala Chai Recipe. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('clearCompleted').addEventListener('click', function() {
+            const checkboxes = document.querySelectorAll('#ingredient-list input[type="checkbox"]');
+            checkboxes.forEach(checkbox => {
+                if (checkbox.checked) {
+                    checkbox.parentElement.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
